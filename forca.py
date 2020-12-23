@@ -109,5 +109,7 @@ def jogar():
             print("\nVocê concluiu o desafio!! :D")
             acertou = True
 
+print("Alteração teste para checar funcionalidade do push")
+
 if (__name__ == "__main__"):
     jogar()
