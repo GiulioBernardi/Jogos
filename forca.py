@@ -103,6 +103,7 @@ def jogar():
 
         if(letras_acertadas.count('_') > 0):
             print("Faltam {} letras".format(str(letras_acertadas.count('_'))))
+            print("você errou essas letras:")
             if(forca == 7):
                 enforcou = enforcado(palavra_secreta, enforcou)
         else:
