@@ -2,7 +2,7 @@ import random
 def jogar():
 
     print("Bem-vindo ao jogo de Adivinhação!")
-    numero_secreto = random.randint(1, 50)
+    numero_secreto = random.randint(1, 100)
     pontos = 1000
     print("Nível de dificuldade:\n(1) 15 tentativas\n(2) 10 tentativas\n(3) 5 tentativas")
     nivel = int(input("Escolha o nível:"))
@@ -24,8 +24,8 @@ def jogar():
         print("Tentativa {} de {}.".format(tentativa_atual, qtd_chances))  # string interpolation
         contador-=1
         tentativa_atual+=1
-        tentativa = int(input("Digite um número de 1 a 50:"))
-        if(tentativa >= 1 and tentativa <=50 ):
+        tentativa = int(input("Digite um número de 1 a 100:"))
+        if(tentativa >= 1 and tentativa <=100 ):
             acertou = tentativa == numero_secreto
             mais = tentativa > numero_secreto
             menos = tentativa < numero_secreto
