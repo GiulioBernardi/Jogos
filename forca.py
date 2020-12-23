@@ -85,9 +85,9 @@ def jogar():
     while (not enforcou and not acertou):
         limite = len(palavra_secreta)
         chute = chute_usuario()
-        index_palavra = 0  # contador
+        index_palavra = 0
 
-        for letra in palavra_secreta:  # letra = váriavel dentro da lista ["B", "a", "n", "a", "n", "a"]
+        for letra in palavra_secreta:
             erro = False
             if chute in palavra_secreta:
                 chute_correto(chute, letra, letras_acertadas,index_palavra)
