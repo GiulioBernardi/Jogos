@@ -58,6 +58,15 @@ def enforcado(palavra_secreta, enforcou):
     print("A palavra era: ", palavra_secreta)
     enforcou = True
     return enforcou
+
+
+def mostra_tentativa_errada(chute, letras_erradas):
+    if chute in letras_erradas:
+        print("Você já tentou essa letra")
+    else:
+        letras_erradas.append(chute)
+
+
 def jogar():
 
     erros = boneco_enforcado()
@@ -99,10 +108,8 @@ def jogar():
 
         if (erro == True):
             forca += 1
-            if chute in letras_erradas:
-                continue
-            else:
-                letras_erradas.append(chute)
+            mostra_tentativa_errada(chute, letras_erradas)
+
 
         imprime_boneco_e_letras(erros, forca, letras_acertadas)
         index_limite += 1
