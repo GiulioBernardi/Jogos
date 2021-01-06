@@ -1,5 +1,6 @@
 import forca
 import Adivinhacao
+import quiz
 
 print("Bem-vindo aos meus jogos")
 
@@ -18,7 +19,6 @@ while(valor_valido):
         print("Jogo de Adivinhação\n")
         Adivinhacao.jogar()
         valor_valido = False
-
     elif(jogo==3):
         print("QUIZ")
         quiz.jogar()
