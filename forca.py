@@ -58,16 +58,8 @@ def enforcado(palavra_secreta, enforcou):
     print("A palavra era: ", palavra_secreta)
     enforcou = True
     return enforcou
-
-
-def mostra_tentativa_errada(chute, letras_erradas):
-    if chute in letras_erradas:
-        print("Você já tentou essa letra")
-    else:
-        letras_erradas.append(chute)
-
-
 def jogar():
+
 
     erros = boneco_enforcado()
     mensagem_dificuldade()
@@ -83,8 +75,6 @@ def jogar():
     else:
         palavra_secreta = leitura_hard()
 
-
-    letras_erradas = []
     letras_acertadas = quantidade_letras(palavra_secreta)
     print(letras_acertadas)
 
@@ -108,20 +98,19 @@ def jogar():
 
         if (erro == True):
             forca += 1
-            mostra_tentativa_errada(chute, letras_erradas)
-
 
         imprime_boneco_e_letras(erros, forca, letras_acertadas)
         index_limite += 1
 
         if(letras_acertadas.count('_') > 0):
             print("Faltam {} letras".format(str(letras_acertadas.count('_'))))
-            print("Você já tentou: ", letras_erradas)
             if(forca == 7):
                 enforcou = enforcado(palavra_secreta, enforcou)
         else:
             print("\nVocê concluiu o desafio!! :D")
             acertou = True
+
+print("Alteração teste para checar funcionalidade do push")
 
 if (__name__ == "__main__"):
     jogar()
