@@ -60,6 +60,7 @@ def enforcado(palavra_secreta, enforcou):
     return enforcou
 def jogar():
 
+
     erros = boneco_enforcado()
     mensagem_dificuldade()
     nivel = int(input("Escolha a dificuldade: "))
