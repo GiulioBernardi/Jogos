@@ -1,22 +1,23 @@
-def findNumber(arr, k):
-    arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-    k = int(input("digite um número: "))
-    for c in range(len(arr)):
-        if k == arr[c]:
-            print("sim")
-            break
-        else:
-            print("Não")
+import forca
+import Adivinhacao
 
+print("Bem-vindo aos meus jogos")
 
+valor_valido = True
+while(valor_valido):
 
+    print("Escolha seu jogo\n(1) Jogo de Forca\n(2) Jogo de Adivinhação")
 
+    jogo = int(input("Escolha o jogo: "))
 
-
-if __name__ == '_main_':
-    arr_count = int (input().strip())
-    arr=[]
-    for c in range(arr_count):
-        arr_intem = int(input().strip())
-        arr.append(arr_intem)
-        
+    if(jogo == 1):
+        print("jogo de Forca\n")
+        forca.jogar()
+        valor_valido = False
+    elif(jogo == 2):
+        print("Jogo de Adivinhação\n")
+        Adivinhacao.jogar()
+        valor_valido = False
+    else:
+        print("Valor inválido\n")
+        valor_valido = True
