@@ -25,6 +25,7 @@ def desenha(vivo):
         dot(10, 'blue')
     else:
         dot(10, 'red')
+    #pinta os obstáculos de preto
     for bolinha in obstaculos:
         goto(obstaculos.x, obstaculos.y)
         dot(20, 'black')
@@ -32,11 +33,12 @@ def desenha(vivo):
 
 # CRIA O EFEITO DE GRAVIDADE
 def move():
+    #gravidade:
     jogador.y -= 3
 
-    # SÓ SERÃO COLOCADOS OBSTÁCULOS SE O RESULTADO FOR '0'
-    # PARA NÃO TER MUITAS BOLINHAS E NÃO FICAR DIFÍCIL DEMAIS
+    # NUMS ALEATÓRIOS DE 0 A 10. BOLINHAS SÓ APARECEÇÃO SE O RETORNO FOR 0
+    # ISSO PARA DIMINUIR A QTD DE BOLINHAS NA TELA
     if randrange(0, 10) == 0:
-        y = randrange(-199, 199)
-        bola = vector(199, y)
+        # SPAWNA UMA BOLINHA NA TELA NO EIXO Y ENTRE -199 E 199
+        bola = vector(199, randrange(-199, 199))
         obstaculos.append(bola)
