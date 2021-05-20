@@ -68,4 +68,26 @@ def move():
             desenha(vivo=False)
             return
 
+    # MANTEM O JOGADOR VIVO POR PADRAO
+    desenha(vivo=True)
 
+    # CHAMA A FUNÇAO move() A CADA 50 MS
+    ontimer(move, 50)
+
+# CONFIGURA A TELA COM width=420, height=420, x=370, y=0
+
+
+# NÃO DEIXA A TELA SER PINTADA
+up()
+
+# MELHORA A PERFOANCE DE ATUALIZAÇAO GRAFICA
+tracer(False)
+
+# CHAMA A FUNÇAO QUANDO O JOGADOR CLICAR NO MOUSE
+onscreenclick(click)
+
+# FUNÇAO QUE MOVE TUDO
+move()
+
+#QUANDO A move() FINALIZAR, ESSA FUNÇAO FINALIZA TUDO
+done()
